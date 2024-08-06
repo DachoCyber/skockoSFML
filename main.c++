@@ -85,7 +85,7 @@ int isEqual(int guess[], int comb[]) {
 
 void load(Slagalica& slagalicaInstance) {
     for (int i = 0; i < 6; i++) {
-        if (!slagalicaInstance.znakoviTexture[i].loadFromFile("znakovi/" + slagalicaInstance.znakovi[i] + ".jpg")) {
+        if (!slagalicaInstance.znakoviTexture[i].loadFromFile(slagalicaInstance.znakovi[i] + ".jpg")) {
             cerr << "Error loading texture: " << slagalicaInstance.znakovi[i] << ".jpg" << endl;
             exit(-1);
         }
